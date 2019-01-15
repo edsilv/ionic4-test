@@ -1,0 +1,20 @@
+{
+  "name": "ionic4-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edsilv/ionic4-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edsilv/ionic4-test/issues"
+  },
+  "homepage": "https://github.com/edsilv/ionic4-test#readme"
+}
