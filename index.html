@@ -1,48 +1,92 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ionic test</title>
-    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
-    <style>
-        body {
-            font-family: sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>ionic test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://unpkg.com/@ionic/core@4.0.0-rc.1/css/ionic.bundle.css">
+  <script src="https://unpkg.com/@ionic/core@4.0.0-rc.1/dist/ionic.js"></script>
 </head>
+
 <body>
-    <ion-item>
-        <ion-button shape="round" color="primary" fill="outline">Hello World</ion-button>
-        <ion-button size="small">Small Button</ion-button>
-    </ion-item>
+  <ion-app>
     
-    <ion-item>
-        <ion-checkbox color="primary" checked></ion-checkbox>
-        <ion-checkbox color="secondary"></ion-checkbox>
-    </ion-item>
+    <ion-content id="content" fullscreen>
+        <ion-item>
+            <ion-button shape="round" color="primary" fill="outline">Hello World</ion-button>
+            <ion-button size="small">Small Button</ion-button>
+        </ion-item>
+        
+        <ion-item>
+            <ion-checkbox color="primary" checked></ion-checkbox>
+        </ion-item>
 
-    <ion-item>
-        <ion-range>
-            <ion-icon slot="start" size="small" name="sunny"></ion-icon>
-            <ion-icon slot="end" name="sunny"></ion-icon>
-        </ion-range>
-    </ion-item>
-    
-    <ion-item>
-        <ion-label>Hair Color</ion-label>
-        <ion-select value="brown" ok-text="Okay" cancel-text="Dismiss">
-            <ion-select-option value="brown">Brown</ion-select-option>
-            <ion-select-option value="blonde">Blonde</ion-select-option>
-            <ion-select-option value="black">Black</ion-select-option>
-            <ion-select-option value="red">Red</ion-select-option>
-        </ion-select>
-    </ion-item>
+        <ion-item>
+            <ion-range>
+                <ion-icon slot="start" size="small" name="sunny"></ion-icon>
+                <ion-icon slot="end" name="sunny"></ion-icon>
+            </ion-range>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label>Hair Color</ion-label>
+            <ion-select value="brown" ok-text="Okay" cancel-text="Dismiss">
+                <ion-select-option value="brown">Brown</ion-select-option>
+                <ion-select-option value="blonde">Blonde</ion-select-option>
+                <ion-select-option value="black">Black</ion-select-option>
+                <ion-select-option value="red">Red</ion-select-option>
+            </ion-select>
+        </ion-item>
 
-    <ion-item>
-        <ion-label>Mushrooms</ion-label>
-        <ion-toggle checked></ion-toggle>
-    </ion-item>
+        <ion-list>
+            <ion-item>
+                <ion-label>Apple</ion-label>
+                <ion-toggle slot="start" name="apple" checked></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Banana</ion-label>
+                <ion-toggle slot="start" name="banana" checked></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Cherry, disabled</ion-label>
+                <ion-toggle slot="start" color="danger" name="cherry" disabled></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Grape, checked, disabled</ion-label>
+                <ion-toggle slot="start" id="grapeChecked" name="grape" checked disabled></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Kiwi, (ionChange) Secondary color</ion-label>
+                <ion-toggle slot="start" color="secondary" (ionChange)="kiwiChange($event)"></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Strawberry, (ionChange) checked="true"</ion-label>
+                <ion-toggle slot="start" color="light" (ionChange)="strawberryChange($event)" checked="true"></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Checkbox right, checked, really long text that should ellipsis</ion-label>
+                <ion-toggle slot="end" color="danger" checked></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Checkbox right side</ion-label>
+                <ion-toggle slot="end" checked></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Button w/ right side default icon, really long text that should ellipsis</ion-label>
+                <ion-icon name="information-circle" slot="end"></ion-icon>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-app>
 </body>
 </html>
